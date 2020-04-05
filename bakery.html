@@ -40,14 +40,62 @@
 				<img src="baking.jpg" width="450px" height="290px" alt="aboutus" class="aboutimg"> 
 				<div class= "about">
 					<h1> About us </h1>
-					<span> Has been continously baking since 1997, Katherine Bakery is prouded to bring you the most wonderful cake in the town. We offer wide range of cakes and decoration style. Our happiness is your smile and your delight when enjoy those beautiful and delicous cakes. Let us add some sweets to your sweet life.  </span>
+					<p> Has been continously baking since 1997, Katherine Bakery is proud to bring you the most wonderful cake in the town. Our happiness is your smile and your delight when enjoy those beautiful and delicous cakes. </p>
+					<span> Let us bake your day! </span> 
 				</div>
 				<div id= "face2"> 
 						<h2> About us </h2>
 					</div>	
 			</div>
+		
+			<div class="products"> <h1> Our Products </h1> </div>
 
- 		</div>
+			<div class="part2">
+				<div class="cake">
+					<div class="text-container">
+					<div class="text">
+					<h3> Birthday cakes </h3>
+						<p> With those most wonderful cakes from Katherine Bakery, your loved ones will have an unforgetable birthday. </p>
+						<span> Let's send some sweets to your sweetheart. </span> 
+						<a href="#"> Read More </a>
+					</div>
+					</div>
+					<img src="birthday1.jpeg" width="310px" height="350px" alt="aboutus" class="cakeproducts"> 
+				</div>
+				<div class="cake">
+					<div class="text-container">
+					<div class="text">
+					<h3> Wedding cakes </h3>
+						<p> Has been continously baking since 1997, Katherine Bakery is proud to bring you the most wonderful cake in the town. Our happiness is your smile and your delight when enjoy those beautiful and delicous cakes. Let us add some sweets to your sweet life.  </p>
+						<a href="#"> Read More </a>
+					</div>
+					</div>
+					<img src="weddingcakes4.jpg" width="310px" height="350px" alt="aboutus" class="cakeproducts"> 
+				</div>
+			</div>
+			<div class="part2">
+				<div class="cake">
+					<div class="text-container">
+					<div class="text">
+					<h3> Birthday cakes </h3>
+						<p> The birthday of your loved ones are coming? Don't worry, Katherine Bakery is here. With those most wonderful cakes from Katherine Bakery, your loved ones will have an unforgetable birthday. Let's send some sweets to your sweetheart.  </p>
+						<a href="#"> Read More </a>
+					</div>
+					</div>
+					<img src="birthday1.jpeg" width="310px" height="350px" alt="aboutus" class="cakeproducts"> 
+				</div>
+				<div class="cake">
+					<div class="text-container">
+					<div class="text">
+					<h3> Wedding cakes </h3>
+						<p> Has been continously baking since 1997, Katherine Bakery is proud to bring you the most wonderful cake in the town. Our happiness is your smile and your delight when enjoy those beautiful and delicous cakes. Let us add some sweets to your sweet life.  </p>
+						<a href="#"> Read More </a>
+					</div>
+					</div>
+					<img src="cake.jpg" width="310px" height="350px" alt="aboutus" class="cakeproducts"> 
+				</div>
+			</div>
+		</div>
 	</section>
 </body>
 </html>
@@ -63,7 +111,7 @@
 
 	window.addEventListener('scroll', function(event) { 
     	event.preventDefault();
-    	if (window.scrollY <= 540) {
+    	if (window.scrollY <= 400) {
         document.querySelector('.navbar').style.backgroundColor = 'transparent';} 
 	else {
         document.querySelector('.navbar').style.backgroundColor = '#ffb0cd';}
@@ -73,7 +121,14 @@
 	window.addEventListener('scroll', function(event) { 
     	event.preventDefault();
     	if (window.scrollY <= 260)  {
-        document.querySelector('.paragraph').style.top = '900px';}
+        document.querySelector('.paragraph').style.top = '1000px';}
 	else {document.querySelector('.paragraph').style.top = '720px';}
+	});
+
+	window.addEventListener('scroll', function(event) { 
+    	event.preventDefault();
+    	if (window.scrollY <= 630)  {
+        document.querySelector('.products').style.margin = '250px';}
+	else {document.querySelector('.products').style.margin = '100px';}
 	});
 </script>
