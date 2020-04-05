@@ -32,7 +32,7 @@ html, body {
 }
 #title {
 	position: absolute;
-	font-size: 90px;
+	font-size: 85px;
 	color: white;
 	text-shadow: 2px 2px 4px black;
 	text-align: center;
@@ -212,17 +212,19 @@ nav a:hover {
 }
 .text{	
 	top: 0;
-	height: 320px;
+	height: 290px;
 	width: 80%;
-	margin: -15px 25px;
+	margin: 0px 30px;
 	text-align: justify;
 	font-size: 18px;
 }
 .cake:hover .cakeproducts{
-	width: 150px;
-	height: 150px;
-	margin: -220px -130px;
+	width: 170px;
+	height: 180px;
+	margin: -260px -145px;
 	border-radius: 10%;
+	border: 1px solid #ff55ff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 	transition: 0.5s ease-in-out;	
 }
 .text h3{ 
