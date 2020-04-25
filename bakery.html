@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Parallax.js</title>
 <script src="parallax.js"></script>
 <link rel="stylesheet" type="text/css" href="mystyle.css">	
@@ -13,7 +14,7 @@
 			<div class= "banner">Katherine Bakery </div>
 			<nav class="nav">
 				<ul>
-				<li><a href="#">Home</a></li>
+				<li><a href="#content">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Products</a></li>
 				<li><a href="#">Contact</a></li>
@@ -21,7 +22,7 @@
 			</nav>			
 		</div>
  	</header>
-	<div class= "content">
+	<div id= "content">
 		<section>
 		<div class="bannerimg">
 			<ul id="scene">
@@ -56,7 +57,7 @@
 					<div class="text">
 					<h3> Birthday cakes </h3>
 						<p> With those most wonderful cakes from Katherine Bakery, your loved ones will have an unforgetable birthday. </p>
-						<span> Let's send some sweets to your sweetheart. </span> 
+						<span> Katherine Bakery, Bake the World a Butter Place. </span> 
 						<p>	<a href="#"> Read More </a> </p>
 					</div>
 					</div>
@@ -74,14 +75,13 @@
 					</div>
 					<img src="weddingcakes4.jpg" width="310px" height="350px" alt="aboutus" class="cakeproducts"> 
 				</div>
-			</div>
-			<div class="part2">
+
 				<div class="cake">
 					<div class="text-container">
 					<div class="text">
 					<h3> Cupcakes </h3>
 						<p> If cupcakes are wrong. We don’t wanna be right. We both fall in love with little sweetness from heaven.</p> 
-						<p> Take you to the paradise with just one bite of cupcake.  </p>
+						<p> How about going to the paradise with just one bite of cupcake?  </p>
 						<p> <a href="#"> Read More </a> </p>
 					</div>
 					</div>
@@ -90,12 +90,12 @@
 				<div class="cake">
 					<div class="text-container">
 					<div class="text">
-					<h3> Wedding cakes </h3>
-						<p> Has been continously baking since 1997, Katherine Bakery is proud to bring you the most wonderful cake in the town. Our happiness is your smile and your delight when enjoy those beautiful and delicous cakes. Bake the World a Butter Place.  </p>
+					<h3> Donuts </h3>
+						<p> Has been continously baking since 1997, Katherine Bakery is proud to bring you the most wonderful cake in the town. Our happiness is your smile and your delight when enjoy those beautiful and delicous cakes.   </p>
 						<a href="#"> Read More </a>
 					</div>
 					</div>
-					<img src="cake.jpg" width="310px" height="350px" alt="aboutus" class="cakeproducts"> 
+					<img src="real donut 4.jpg" width="310px" height="350px" alt="aboutus" class="cakeproducts"> 
 				</div>
 			</div>
 		</div>
@@ -114,24 +114,39 @@
 
 	window.addEventListener('scroll', function(event) { 
     	event.preventDefault();
-    	if (window.scrollY <= 400) {
-        document.querySelector('.navbar').style.backgroundColor = 'transparent';} 
+    	if (window.scrollY >= 300) {
+        document.querySelector('.navbar').style.backgroundColor = '#ffb0cd';} 
 	else {
-        document.querySelector('.navbar').style.backgroundColor = '#ffb0cd';}
+        document.querySelector('.navbar').style.backgroundColor = 'transparent';}
 	});
 	
-
 	window.addEventListener('scroll', function(event) { 
     	event.preventDefault();
-    	if (window.scrollY <= 260)  {
-        document.querySelector('.paragraph').style.top = '1000px';}
-	else {document.querySelector('.paragraph').style.top = '720px';}
+    	if (window.scrollY <= 300) {
+        document.querySelector('.bannerimg').style.visibility = "visible";} 
+	else {
+        document.querySelector('.bannerimg').style.visibility = "hidden";}
 	});
 
 	window.addEventListener('scroll', function(event) { 
     	event.preventDefault();
-    	if (window.scrollY <= 630)  {
-        document.querySelector('.products').style.margin = '250px';}
-	else {document.querySelector('.products').style.margin = '100px';}
+    	if (window.scrollY <= 300)  {
+        document.querySelector('.paragraph').style.top = '1000px';
+		document.querySelector('.paragraph').style.visibility = 'hidden';}
+		else {
+			document.querySelector('.paragraph').style.top = '550px';
+			document.querySelector('.paragraph').style.visibility = 'visible';}
+	});
+
+
+	window.addEventListener('scroll', function(event) { 
+    	event.preventDefault();
+    	if (window.scrollY <= 550)  {
+        document.querySelector('.products').style.margin = '350px';
+		document.querySelector('.about').style.visibility = 'visible';}
+	else {
+		document.querySelector('.products').style.margin = '90px';
+		document.querySelector('.about').style.visibility = 'hidden';
+		}
 	});
 </script>
