@@ -1,64 +1,33 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 html, body {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
+    margin: 0;
+	padding: 0;
+	overflow-x: hidden;
 } 
+body::-webkit-scrollbar {
+	display: none;
+  }
 #content { 
 	width: 100%;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	position: absolute;
 }
 .bannerimg
 {
 	width: 100%;
 	height: 100vh;	
-	background: url('./image/background.jpg');
-	background-size: 100% 100%;
-	overflow: hidden;
-	background-repeat: no-repeat;
+	background: url('./image/Frame 1.png') no-repeat center;
+	background-size: cover;
 	position: relative;
-	top: 0px;
-	margin: 0px;	
-	padding: 0px;
-	object-fit: cover;
+	top: 0;
+    object-fit: fill;
 }
 .mixBlnd
 {
 	background-blend-mode: screen;
 }
-#title {
-	position: absolute;
-	font-size: 85px;
-	color: white;
-	text-shadow: 2px 2px 4px black;
-	text-align: center;
-	font-family: 'Dancing Script', cursive;
-	margin: 250px;
-}
-.cupcake2 {	
-	position: absolute;
-	left: 1200px;
-	margin: 30px;
-}
-.cupcake3 {
-	position: absolute;
-	left: 370px;
-	margin: 220px;
-	}
-.donut1 {
-	position: absolute;
-	margin: -110px;
-	left: 1500px;
-	}
-.donut2 {
-	position: absolute; 
-	margin: -120px;
-	left: 150px;
-	}
 .navbar {
 	width: 100%;
 	}
@@ -67,7 +36,7 @@ html, body {
 	align-items: center;
 }
 .navbar {
-	background: transparent; //#f35588;
+	background: transparent;
 	backdrop-filter: blur(5px);
 	padding: 0px;
 	position: fixed;
@@ -77,12 +46,7 @@ html, body {
 	display: inline-flex;
 	align-items: center;
 	transition-duration: 2s;}
-//.navbar::after {
-	content: '';
-	display: table;
-	clear: both;
-	vertical-align: center;
-}
+
 .nav { 
 	display:flex;
 	float: right;
@@ -118,11 +82,12 @@ nav a:hover {
 	padding: 12px;
 	border-radius: 50%;
 }
+
 .paragraph { 
 	width: 80%;
-	position: absolute;
+	height: 100vh;
+	position: relative;
 	margin-left: 130px;
-	top: 800px;
 	transition: 2s ease-in-out;
 	transform: translateY(50px);
 	opacity: 0;
@@ -134,28 +99,18 @@ nav a:hover {
 .part1 {
 	position: relative; 
 	z-index: 1;
-	height: 360px;
+	top: 30%;
+	height: 380px;
 	width: fit-content;
 	border-radius: 2%;
 	display: grid;
 	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 	grid-column-gap: 20px;
-	margin: auto;	
-}
-
-.part1:hover .about{
-	color: black;	
-}
-.part1:hover .about h1{
-	color: #444;
-	font-size: 40px;	
-}
-.part1:hover #face2{
-	color: transparent;	
+	margin: 0 auto;	
 }
 .about {
 	position: relative; 
-	top: 0px;
+	top: -20px;
 	z-index: 2;
 	width: 100%;
 	text-align: center;
@@ -169,7 +124,7 @@ nav a:hover {
 }
 #face2{
 	position: absolute;
-	margin-left: 70%;
+	margin-left: 17%;
 	z-index: 3;
 	top: 100px;
 	font-family: 'Lobster', cursive;
@@ -181,85 +136,209 @@ nav a:hover {
 }
 .aboutimg {
 	position: relative;
-	border-radius: 20%;
-	width: 90%;	
+	border-radius: 35px;
+	width: 100%;	
 	object-fit: cover;
 }
+.part1:hover .about{
+    color: black
+}
+.part1:hover .about h1{
+    color: #444;
+    font-size: 40px
+}
+.part1:hover #face2{
+    color:transparent;
+}
+#products{
+	position: relative;
+}
+@media screen and (max-width: 1200px){
+	.part1{
+		top:0%;
+	}
+	.about{
+		margin: 0 auto;
+		color: black;
+}
+	#face2{
+		color:transparent
+}
+	.about h1{
+		color: #444;
+		font-size: 40px
+	}
+	.paragraph{
+		height: fit-content;
+	}
+}	
 .products{
+	position: relative;
 	text-align: center;
 	font-family: 'Lobster', cursive;
 	color: #444;
 	font-size: 30px;
-	margin-left: 50px;
 	opacity: 0;
-	transition: 1s ease-in-out;
-	transform: translateY(50px);
+	transition: 2s ease-in-out;
+	transform: translateY(10px);
 }
 .product-after{
 	opacity: 1;
 	transform: translateY(0px);
-	margin-left: 50px;
-}
-.cakeproducts {
-	position: absolute;
-	margin-top: -340px;
-	
 }
 .part2 {
+	position: relative;
+	z-index: 0;
 	width: 80%;
 	display: grid;
 	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 	align-items: center;
 	justify-items: center;
-	margin: 0px auto;
+	margin: 30px auto;
 	grid-row-gap: 50px;
-	grid-column-gap: 230px;
+	grid-column-gap: 50px;
 	transition: 1s ease-in-out;
 	opacity: 0;
 	transform: translateY(30px);
 }
 .part2-after{
+	position: relative;
 	opacity: 1;
 	transform: translateY(0px);
 }
-.cake {
-	width: 80%;
-	justify-items: center;
-	align-items: center;
-}
-.text-container {
-	width: 280px;
-	padding: 1px;
-	border: 2px solid pink;
-	border-radius: 10%;
-	align-items: center;
-	margin-left: 15px;
-	margin-top: 40px;
-}
-.text{	
-	top: 0;
-	height: 290px;
-	width: 80%;
-	margin: 0px 30px 0px 30px;
-	text-align: justify;
-	font-size: 18px;
-}
-.cake:hover .cakeproducts{
-	width: 170px;
-	height: 180px;
-	margin: -260px -145px;
-	border-radius: 10%;
-	border: 1px solid #ff55ff;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-	transition: 0.5s ease-in-out;	
-}
-.cake:hover .text-container{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-	transition: 0.5s ease-in-out;	
+.product-image{
+	position:relative;
+	overflow: hidden;
+	text-align: center;
 }
 
-.text h3{ 
-	font-family: 'Lobster', cursive;
-	font-size: 25px;
-	color: #444;
+.part2 .text{
+	border: 1px solid black;
+	padding: 5px;
+	width: 180px;
+	color: black;
+	background-color: rgb(253, 251, 251,0.75);
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 20%;
 }
+.product-image:hover .cakeproducts{
+	opacity: 0.9;
+	transform: scale(1.1);
+	transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+	
+}
+.product-image:hover .text{
+	cursor: pointer;
+}
+.wrapper{
+	margin-top: 50px;
+	background: url('./image/contact.jpg') no-repeat center;
+	opacity: 0;
+	background-size: cover;
+	background-origin: border-box;
+	height: 100vh;
+	position: relative;
+	transition: 2s ease-in-out;
+}
+.wrapper-after{
+	opacity: 1;
+}
+.form-container{
+	position: absolute;
+	top: 55%;
+	transform: translateY(-50%);
+	width: 100%;
+	padding: 0 20px;
+}
+.form-container h1{
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	color: #444;
+	font-size: 40px;
+}
+.form{
+	max-width: 540px;
+    margin: 0 auto;
+    background: rgba(68, 52, 52, 0.5);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+	justify-content: space-around;
+    box-shadow: 0 0 10px rgba(0,0,0,0.13);
+}
+.input-fields{
+	display: flex;
+	flex-direction: column;
+	margin-right: 4%;
+}
+.input-fields .msg{
+	width: 45%;
+}
+.input-fields .input, .msg textarea{
+	margin: 10px 0;
+	background: transparent;
+	border: 0;
+	border-bottom: 2px solid #ffb0cd;
+	padding: 10px;
+	color: #ffb0cd;
+	width: 100%;
+}
+.message{
+	font-size: 15px;
+	color: #fda8c7'
+}
+.msg textarea{
+	height: 185px
+}
+::-webkit-input-placeholder{
+    color: #fadbe6;
+}
+.btn{
+	background: #fa7dab;
+	text-align: center;
+	padding: 15px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+@media screen and (max-width: 1200px){
+    .form{
+		flex-direction: column;
+    }
+    .msg textarea{
+        height: 80px;
+    }
+    .input-fields,.msg{
+        width: 100%
+    }
+}
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: #fa7dab;
+	font-size: 20px;
+}
+.footer-img{
+	align-self: center;
+	cursor: pointer;
+}
+.foot{
+	margin-left: 20px;
+}
+footer p{
+	align-self: center;
+	color: black;
+	text-decoration:none;
+	font-size: 21px;
+}
+footer p:hover{
+	background-color: white;
+	padding:10px;
+	cursor: pointer;
+	border-radius: 15px;
+} 

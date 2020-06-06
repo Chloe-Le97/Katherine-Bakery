@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Katherine Bakery</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <div class='navbar'>
+            <img src='./image/logo.png' width='90px' height='logo' class='logo'>
+            <divv class='banner'>Katherine Bakery</divv>
+            <nav class='nav'>
+                <ul>
+                    <li><a href='#'>Home</a></li>
+                    <li><a href="#about">About</a></li>
+				    <li><a href="#products">Products</a></li>
+				    <li><a href="#contact-form">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class='bannerimg'></div>
+    </section>
+    <section>
+        <div class='paragraph' id='about'>
+            <div class='part1' >
+                
+                <div class='about'>
+                    <h1>About us</h1>
+                    <p>Has been continously baking since 1997, Katherine Bakery is proud to bring you the most wonderful cake in the town. Our happiness is your smile and delight when enjoy the beautiful and delicous cakes.</p>
+                    <span>Let us bake your day!</span>
+                </div>
+                <div id='face2'>
+                    <h2>About us</h2>
+                </div>
+                <img src='./image/baking.jpg' width='400px' height='290px' alt='aboutus' class='aboutimg'>
+            </div>
+        </div>
+    </section>
+    
+    <section id='products'>
+        <div class='products'>
+            <h1>Our Products</h1>
+        <div class='part2'>
+           <div class='product-image'>
+               <img src="./image/cupcake real 4.jpeg" width="310px" height="350px" alt="cupcake" class="cakeproducts"> 
+               <div class='text'>Cupcake</div>
+            </div> 
+           <div class='product-image'>
+               <img src="./image/real donut 4.jpg" width="310px" height="350px" alt="donut" class="cakeproducts"> 
+               <div class='text'>Donut</div>
+            </div>
+            <div class='product-image'> 
+                <img src="./image/cheesecake.jpg" width="310px" height="350px" alt="cheesecake" class="cakeproducts"> 
+                <div class='text'>Cheesecake</div>
+            </div>
+            <div class='product-image'>
+                <img src="./image/birthday1.jpeg" width="310px" height="350px" alt="birthday cake" class="cakeproducts">
+                <div class='text'>Birthday Cake</div>
+            </div>
+            <div class='product-image'>
+                <img src="./image/seasonal.jpg" width="310px" height="350px" alt="seasonal cake" class="cakeproducts"> 
+                <div class='text'>Seasonal Cake</div>
+            </div>
+            <div class='product-image'>
+                <img src="./image/weddingcakes4.jpg" width="310px" height="350px" alt="wedding cake" class="cakeproducts"> 
+                <div class='text'>Wedding Cake</div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class='contact-form' id='contact-form'>
+        <div class='wrapper'>
+            <div class='form-container'>
+                <h1>Contact Us</h1>
+                <div class='form'>
+                    <div class='input-fields'>
+                        <input type='text' class='input' placeholder='Name'>
+                        <input type='text' class='input' placeholder='Email Address'>
+                        <input type='text' class='input' placeholder='Phone'>
+                        <input type='text' class='input' placeholder='Subject'>  
+                    </div>
+                    <div class='msg'>
+                        <textarea class='message' placeholder='Message'></textarea>
+                        <div class='btn'>Send</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p> <img src='./image/contact-icon-png-3.png' width='30px' height='30px' class='call'> Contact us</p> 
+        <p> <img src='./image/help.png' width='30px' height='30px'> Need help?</p>
+        <div class='footer-img'>
+            <img src='./image/facebook.png' width='30px' height='30px' class='foot'>
+            <img src='./image/instagram.png' width='30px' height='30px' class='foot'>
+            <img src='./image/twitter.png' width='30px' height='30px' class='foot'>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    window.addEventListener('scroll',function(event){
+        event.preventDefault();
+        if (window.scrollY>=400 && window.scrollY<=2100){
+            document.querySelector('.navbar').style.backgroundColor ='#ffb0cd'}  
+        else {
+        document.querySelector('.navbar').style.backgroundColor = 'transparent';}
+	});    
+        
+    
+
+    function scrollAbout(){
+        event.preventDefault();
+        var scrollAbout = document.querySelector('.paragraph');
+        var aboutPosition = scrollAbout.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight/1.9;
+        
+        if(aboutPosition<screenPosition){
+            scrollAbout.classList.add('paragraph-after')
+        }
+        else{ scrollAbout.classList.remove('paragraph-after')}
+    }
+    window.addEventListener('scroll',scrollAbout);
+
+    function scrollProduct(){
+		event.preventDefault();
+		var scrollProduct = document.querySelector('.products');
+		var scrollCake = document.querySelector('.part2');
+		var productPosition = scrollProduct.getBoundingClientRect().top;
+		var screenPosition = window.innerHeight/1.3;
+
+		if (productPosition < screenPosition){
+			scrollProduct.classList.add('product-after');
+			scrollCake.classList.add('part2-after');
+			
+		}
+		else {
+			scrollProduct.classList.remove('product-after');
+			scrollCake.classList.remove('part2-after');
+		}
+	}
+	window.addEventListener('scroll',scrollProduct);
+
+    function scrollContact(){
+        event.preventDefault();
+        var scrollContact = document.querySelector('.wrapper');
+        var contactPosition = scrollContact.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight/1.3;
+        
+        if(contactPosition<screenPosition){
+            scrollContact.classList.add('wrapper-after')
+        }
+        else{scrollContact.classList.remove('wrapper-after')}
+    }
+    window.addEventListener('scroll',scrollContact);
+    
+</script>
